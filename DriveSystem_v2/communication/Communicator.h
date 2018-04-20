@@ -1,8 +1,8 @@
 /*
  * Communicator.h
  *
- * Created: 2018-04-20 3:00:29 PM
- *  Author: spear
+ * Defines communication interface API.
+ * Author: Brad Ofrim
  */ 
 
 

@@ -1,7 +1,7 @@
 /*
  * Communicator.cpp
  *
- * Defines communication interface API.
+ * Basic implementation of the communicator.
  * Author: Brad Ofrim
  */ 
 
