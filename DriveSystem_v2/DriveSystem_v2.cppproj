@@ -155,9 +155,30 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="hardware\atmega2560_config.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="timer\timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="uart\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="uart\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="motor-control" />
+    <Folder Include="hardware" />
+    <Folder Include="uart" />
+    <Folder Include="timer" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
