@@ -9,16 +9,17 @@
 #ifndef COMMUNICATOR_H_
 #define COMMUNICATOR_H_
 
+#include <string>
 
 class Communicator
 {
 protected:
-	char* message_;
+	std::string message_;
 public:
 	Communicator(void);
 	virtual bool SendMessage(const char* send_message) = 0;
-	virtual const char* GetNewMessage(void) = 0;
-	virtual const char* GetMessage(void) = 0;
+	virtual std::string GetNewMessage(void) = 0;
+	virtual std::string GetMessage(void) = 0;
 };
 
 
