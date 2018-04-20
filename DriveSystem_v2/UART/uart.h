@@ -1,8 +1,8 @@
 /*
  * uart.h
  *
- * Created: 2018-04-20 11:21:10 AM
- *  Author: spear
+ * Simple UART driver for Atmega.
+ * Author: Brad & Brian Ofrim
  */ 
 
 
