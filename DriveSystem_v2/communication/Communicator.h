@@ -17,9 +17,8 @@ protected:
 public:
 	Communicator(void);
 	virtual bool SendMessage(const char* send_message) = 0;
-	virtual bool HasPendingMessage(void) = 0;
 	virtual const char* GetMessage(void) = 0;
-	virtual const char* GetPendingMessage(void) = 0;
+	virtual const char* GetNewMessage(void) = 0;
 };
 
 
