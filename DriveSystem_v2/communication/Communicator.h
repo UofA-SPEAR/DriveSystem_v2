@@ -13,13 +13,32 @@
 
 class Communicator
 {
-protected:
-	std::string message_;
 public:
+
+	/* Constructor, only initializes message_. */
 	Communicator(void);
-	virtual bool SendMessage(const char* send_message) = 0;
-	virtual std::string GetNewMessage(void) = 0;
-	virtual std::string GetMessage(void) = 0;
+	
+	/* Implementation specific write.
+	 * Return the number of bytes written.
+	 */
+	virtual int SendMessage(const char* send_message) = 0;
+	
+	/* Recieves a message, updates internal state, and returns the message. */
+	std::string GetNewMessage(void);
+	
+	/* Returns the most recent message. */
+	std::string GetMessage(void);
+
+protected:
+
+	/* Most recently read message. */
+	std::string message_;
+	
+	/* Implementation specific read. Does NOT need to store new message in
+	 * message_ variable. Should not block.
+	 * Returns a new message if there is one, otherwise, returns 0. 
+	 */
+	virtual std::string RecieveMessage(void) = 0;
 };
 
 

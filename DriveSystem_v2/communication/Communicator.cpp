@@ -17,3 +17,30 @@ Communicator::Communicator(void)
 {
 	message_ = 0;	
 };
+
+/* 
+ * Name: GetNewMessage
+ * Description: Receive a message, update state, and return the message.
+ * Inputs: None
+ * Outputs: String representing the received message, 0 if message not
+ * available.
+*/
+std:string Communicator::GetNewMessage(void)
+{
+	std::string new_message = RecieveMessage();
+	if(new_message != 0)
+		message_ = new_message;
+
+	return new_message;
+}
+
+/* 
+ * Name: GetMessage
+ * Description: Get the most recently read message.
+ * Inputs: None
+ * Outputs: String representing the most recent valid message received.
+*/
+std:string Communicator::GetMessage(void)
+{
+	return message_;
+}
