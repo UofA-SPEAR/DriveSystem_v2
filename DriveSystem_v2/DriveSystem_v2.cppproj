@@ -155,6 +155,18 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="communication\Communicator.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="communication\Communicator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="communication\uart\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="communication\uart\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="hardware\atmega2560_config.h">
       <SubType>compile</SubType>
     </Compile>
@@ -167,17 +179,12 @@
     <Compile Include="timer\timer.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="uart\uart.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="uart\uart.h">
-      <SubType>compile</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="communication\uart" />
     <Folder Include="motor-control" />
     <Folder Include="hardware" />
-    <Folder Include="uart" />
+    <Folder Include="communication" />
     <Folder Include="timer" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
