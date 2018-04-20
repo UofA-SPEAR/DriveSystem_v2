@@ -15,5 +15,5 @@
 */
 Communicator::Communicator(void)
 {
-	message_ = NULL;	
+	message_ = 0;	
 };

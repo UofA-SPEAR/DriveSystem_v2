@@ -7,6 +7,7 @@
 
 
 #include "timer.h"
+#include <avr/wdt.h>
 
 void setup_timer()
 {
