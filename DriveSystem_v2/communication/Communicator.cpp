@@ -6,6 +6,7 @@
  */ 
 
 #include "Communicator.h"
+#include <string.h>
 
 /* 
  * Name: Communicator Constructor
@@ -20,27 +21,28 @@ Communicator::Communicator(void)
 
 /* 
  * Name: GetNewMessage
- * Description: Receive a message, update state, and return the message.
- * Inputs: None
- * Outputs: String representing the received message, 0 if message not
- * available.
+ * Description: Receive a message and copy it into the message buffer.
+ * Inputs:	char *buffer to copy data to.
+ *			int buffer_size representing the size of the buffer.
+ * Outputs: Int representing the number of bytes received.
 */
-std:string Communicator::GetNewMessage(void)
+int Communicator::GetNewMessage(char *buffer, int buffer_size)
 {
-	std::string new_message = ReceiveMessage();
-	if(new_message != 0)
-		message_ = new_message;
-
-	return new_message;
+	int new_message_size = ReceiveMessage(buffer, buffer_size);
+	strncpy(message_, buffer, sizeof(message_));
+	message_[sizeof(message_)-1] = '\0'; // Guarantee null termination
+	message_size_ = new_message_size;
+	return new_message_size;
 }
 
 /* 
  * Name: GetMessage
  * Description: Get the most recently read message.
  * Inputs: None
- * Outputs: String representing the most recent valid message received.
+ * Outputs: Int representing the number of bytes in the message.
 */
-std:string Communicator::GetMessage(void)
+int Communicator::GetMessage(char *buffer, int buffer_size)
 {
-	return message_;
+	strncpy(buffer, message_, sizeof(buffer))
+	return message_size_;
 }

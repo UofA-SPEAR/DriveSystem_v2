@@ -39,7 +39,7 @@ public:
 	int SendMessage(const char* send_message);
 	
 protected:
-	std::string ReceiveMessage(void);
+	int ReceiveMessage(char *buffer, int buffer_size);
 	
 private:
 	char* message_buffer;

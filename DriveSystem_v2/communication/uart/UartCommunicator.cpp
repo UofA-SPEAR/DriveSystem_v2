@@ -24,10 +24,13 @@ UartCommunicator::UartCommunicator(int uart_number)
 		case 0:
 			break;
 		case 1:
+			assert(0) // Drivers not implemented yet
 			break;
 		case 2:
+			assert(0) // Drivers not implemented yet
 			break;
 		case 3:
+			assert(0) // Drivers not implemented yet
 			break;
 		default:
 			assert(0) // Invalid UART number
@@ -49,10 +52,11 @@ UartCommunicator::Init()
 /*
  * Name: ReciveMessage
  * Description: Read buffered bytes received over UART.
- * Inputs: None
- * Outputs: String representing the message that was received.
+ * Inputs:	char *buffer to copy data to.
+ *			int buffer_size representing the size of the buffer.
+ * Outputs: int representing number of bytes received.
 */
-std::string UartCommunicator::ReceiveMessage(void)
+int UartCommunicator::ReceiveMessage(char *buffer, int buffer_size)
 {
 	//TODO: implement
 }
@@ -63,7 +67,7 @@ std::string UartCommunicator::ReceiveMessage(void)
  * Inputs: 
  * Outputs:
 */
-int UartCommunicator::SendMessage()
+int UartCommunicator::SendMessage(const char* send_message)
 {
 	//TODO: implement
 }

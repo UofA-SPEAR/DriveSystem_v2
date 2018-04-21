@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "DriveSystem_v2", "DriveSystem_v2\DriveSystem_v2.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "DriveSystemTests", "DriveSystemTests\DriveSystemTests.cppproj", "{BE06B600-EB7C-4086-A4C5-5CB1A9293C5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -15,6 +17,10 @@ Global
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|AVR.Build.0 = Debug|AVR
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.ActiveCfg = Release|AVR
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|AVR.Build.0 = Release|AVR
+		{BE06B600-EB7C-4086-A4C5-5CB1A9293C5C}.Debug|AVR.ActiveCfg = Debug|AVR
+		{BE06B600-EB7C-4086-A4C5-5CB1A9293C5C}.Debug|AVR.Build.0 = Debug|AVR
+		{BE06B600-EB7C-4086-A4C5-5CB1A9293C5C}.Release|AVR.ActiveCfg = Release|AVR
+		{BE06B600-EB7C-4086-A4C5-5CB1A9293C5C}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
