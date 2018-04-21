@@ -161,10 +161,16 @@
     <Compile Include="communication\Communicator.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="communication\uart\uart.c">
+    <Compile Include="communication\uart\UartCommunicator.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="communication\uart\uart.h">
+    <Compile Include="communication\uart\UartCommunicator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\uart\uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="drivers\uart\uart.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hardware\atmega2560_config.h">
@@ -185,6 +191,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="communication\uart" />
+    <Folder Include="drivers\" />
+    <Folder Include="drivers\uart\" />
     <Folder Include="motor-control" />
     <Folder Include="hardware" />
     <Folder Include="communication" />
