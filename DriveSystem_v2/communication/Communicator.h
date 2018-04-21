@@ -23,7 +23,7 @@ public:
 	 */
 	virtual int SendMessage(const char* send_message) = 0;
 	
-	/* Recieves a message, updates internal state, and returns the message. */
+	/* Receives a message, updates internal state, and returns the message. */
 	std::string GetNewMessage(void);
 	
 	/* Returns the most recent message. */
@@ -38,7 +38,7 @@ protected:
 	 * message_ variable. Should not block.
 	 * Returns a new message if there is one, otherwise, returns 0. 
 	 */
-	virtual std::string RecieveMessage(void) = 0;
+	virtual std::string ReceiveMessage(void) = 0;
 };
 
 

@@ -27,7 +27,7 @@ Communicator::Communicator(void)
 */
 std:string Communicator::GetNewMessage(void)
 {
-	std::string new_message = RecieveMessage();
+	std::string new_message = ReceiveMessage();
 	if(new_message != 0)
 		message_ = new_message;
 
