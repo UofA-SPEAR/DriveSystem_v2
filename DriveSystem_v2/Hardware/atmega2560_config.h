@@ -31,8 +31,23 @@
 /*
  * USART interface
  */
+#define USART0_RECIEVE_VECTOR		USART0_RX_vect
 #define USART0_RX_BUF				UDR0 // Read from
-#define USART0_TX_BUF				UDR0 // Write to  
+#define USART0_TX_BUF				UDR0 // Write to
+
+#define USART1_RECIEVE_VECTOR		USART1_RX_vect
+#define USART1_RX_BUF				UDR1 // Read from
+#define USART1_TX_BUF				UDR1 // Write to
+
+#define USART2_RECIEVE_VECTOR		USART2_RX_vect
+#define USART2_RX_BUF				UDR2 // Read from
+#define USART2_TX_BUF				UDR2 // Write to
+
+#define USART3_RECIEVE_VECTOR		USART3_RX_vect
+#define USART3_RX_BUF				UDR3 // Read from
+#define USART3_TX_BUF				UDR3 // Write to
+
+#define MAX_UART_NUMBER 4
 
 /* Motor Controls */
 
