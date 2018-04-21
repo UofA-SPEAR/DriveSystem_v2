@@ -24,10 +24,10 @@
 FILE uart_output;
 FILE uart_input;
 
-void uart_init();
+void uart0_init();
 void uart_set_io_streams();
-void uart_putchar(char c, FILE *stream);
-char uart_getchar(FILE *stream);
+void uart0_putchar(char c, FILE *stream);
+char uart0_getchar(FILE *stream);
 
 
 #endif /* UART_H_ */
